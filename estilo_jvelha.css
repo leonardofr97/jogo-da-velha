@@ -1,0 +1,33 @@
+#nome_jogo {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+#msg_erro_apelido, #nome_jogador_1, #nome_jogador_2, #entrada_apelido_jogador_1, #entrada_apelido_jogador_2, #msg_vez_jogador, .msg_vez_jogador, #msg_vencedor, .msg_vencedor, #deu_velha {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+table div {
+    width: 100px;
+    height: 100px;
+}
+/* classes com as bordas do grid da velha */
+
+.bottom_right {
+    border-bottom: solid 2px red;
+    border-right: solid 2px red;
+}
+.top_left {
+    border-top: solid 2px red;
+    border-left: solid 2px red;
+}
+.top_right {
+    border-top: solid 2px red;
+    border-right: solid 2px red;
+}
+.bottom_left {
+    border-bottom: solid 2px red;
+    border-left: solid 2px red;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Jogo da velha</title>
+		<!-- estilo css -->
+		<link rel="stylesheet" type="text/css" href="estilo_jvelha.css">
+		<!-- jquery -->
+		<script src="jquery-2.2.1.js"></script>
+		<!-- codificação do jogo -->
+		<script src="jogo.js"></script>
+	</head>
+	<body>
+		<!-- pagina inicial do jogo -->
+		<div id="pagina_inicial" align="center">
+			<table width="600px">
+				<tbody>
+					<tr>
+						<td colspan="3" align="center" id="nome_jogo">JOGO DA VELHA</td>
+					</tr>
+					<!-- jogador 1 e 2 e os campos para os nomes e o botão iniciar jogo -->
+					<tr align="center">
+						<td>
+							<img src="imagens/jogador_1.png">
+							<br><br>
+							<!-- removendo o contorno do campo com "border: 0px;" -->
+							<input id="entrada_apelido_jogador_1" type="text" maxlength="10" placeholder="Apelido Jogador 1" style="border: 0px; text-align: center;">
+						</td>
+						<td>
+							<img id="btn_iniciar_jogo" src="imagens/iniciar.png">
+						</td>
+						<td>
+							<img src="imagens/jogador_2.png" for="entrada_apelido_jogador_2">
+							<br><br>
+							<input id="entrada_apelido_jogador_2" type="text" maxlength="10" placeholder="Apelido Jogador 2" style="border: 0px; text-align: center;">
+						</td>
+					</tr>
+				</tbody>
+			</table> <br><br>
+			<!-- onde aparecerá a mensagem de erro caso o apelido não for digitado -->
+			<span id="msg_erro_apelido"></span>
+		</div>
+		<!-- tela do jogo
+		display: none - para que o palco do jogo primariamente não apareça -->
+		<div id="palco_jogo" style="display: none; margin-top: 50px; text-align: center;">
+			<span align="center" id="nome_jogo">JOGO DA VELHA</span> <br><br>
+			
+			<!-- img dos 2 jogadores e o jogo da velha no meio, todos na msm linha-->
+			<div style="display: inline-block;">
+				<img src="imagens/jogador_1.png">
+				<br>
+				<!-- onde ficará o nome do jogador preenchido -->
+				<span id="nome_jogador_1"></span>
+			</div>
+			<div style="display: inline-block;">
+				<!-- aplicado os estilos de tamanho e bordas do grid no arquivo css -->
+				<table border="0">
+					<tr>
+						<td class="bottom_right">
+							<!-- criados id's para tratar as posições individualmente, será atribuido o nome do id de acordo com sua coordenada -->
+							<div class="jogada" id="a-1">
+								
+							</div>
+						</td>
+						<td class="bottom_right bottom_left">
+							<div class="jogada" id="a-2">
+								
+							</div>
+						</td>
+						<td class="bottom_left">
+							<div class="jogada" id="a-3">
+								
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="bottom_right top_right">
+							<div class="jogada" id="b-1">
+								
+							</div>
+						</td>
+						<td class="bottom_right top_left">
+							<div class="jogada" id="b-2">
+								
+							</div>
+						</td>
+						<td class="top_left bottom_left">
+							<div class="jogada" id="b-3">
+								
+							</div>
+						</td>
+					</tr>
+					
+					<tr>
+						<td class="top_right">
+							<div class="jogada" id="c-1">
+								
+							</div>
+						</td>
+						<td class="top_right top_left">
+							<div class="jogada" id="c-2">
+								
+							</div>
+						</td>
+						<td class="top_left">
+							<div class="jogada" id="c-3">
+								
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div style="display: inline-block; margin-bottom: 70px;">
+				<img src="imagens/jogador_2.png">
+				<br>
+				<span id="nome_jogador_2"></span>
+			</div>
+			<br><br>
+			<!-- onde aparecerá a mensagem que avisa a vez de tal jogador -->
+			<span class="msg_vez_jogador">É a vez de <span id="msg_vez_jogador"></span></span>
+			<!-- onde aparecerá a mensagem de vencedor do jogo -->
+			<span class="msg_vencedor">Vitória de <span id="msg_vencedor"></span> ! <br><br> <img src="imagens/vencedor.png" style="width: 150px; height: 150px;"></span>
+			<!-- onde aparecerá a mensagem deu velha -->
+			<span id="deu_velha"></span> <br><br><br>
+			<!-- botão voltar -->
+			<img src="imagens/voltar.png" id="btn-voltar">
+		</div>
+	</body>
+</html>
